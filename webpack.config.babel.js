@@ -16,6 +16,7 @@ export default env => {
 		devtool: ifProd('source-map', 'eval'),
 		module: {
 			loaders: [
+				{test: /\.css$/, loaders: ['style-loader', 'css-loader']},
 				{test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/}
 			]
 		}

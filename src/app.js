@@ -1,10 +1,12 @@
+require('./css/style.css');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
 	render() {
 		return (
-			<div>Goodbye react</div>
+			<div>Hello React</div>
 		)
 	}
 }
