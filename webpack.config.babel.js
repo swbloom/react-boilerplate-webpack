@@ -20,7 +20,7 @@ export default env => {
 		module: {
 			rules: [
 				{test: /\.js$/, use: ['babel-loader'], exclude: /node_modules/},
-				{test: /\.css$/, use: ifProd(extract({ fallback: 'style-loader', use: 'css-loader' }), ['style-loader', 'css-loader'])}
+				{test: /\.scss$/, use: ifProd(extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'] }), ['css-loader', 'sass-loader'])}
 			]
 		},
 		plugins: [
