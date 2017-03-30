@@ -16,6 +16,9 @@ export default env => {
 			publicPath: '/public/',
 			pathinfo: ifNotProd()
 		},
+		devServer: {
+			overlay: true
+		},
 		devtool: ifProd('source-map', 'eval'),
 		module: {
 			rules: [
